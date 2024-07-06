@@ -25,5 +25,7 @@ router.post("/", upload, API.createPost);
 router.patch("/edit/:id", upload, API.updatePost);
 router.patch("/:id", upload, API.addNewItem);
 router.delete("/:id", API.deletePost);
+router.patch("/deleteItem/:catId/:itemId", API.deleteItem);
+router.patch("/updateprice/:catId/:itemId", upload, API.updateItemPrice);
 
 module.exports = router;
